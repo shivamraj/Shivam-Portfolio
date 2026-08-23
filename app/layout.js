@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Shivam Kumar — Staff Frontend Engineer",
+  title: "Shivam Kumar — Staff Fullstack Engineer | Agentic AI",
   description:
-    "Staff Frontend Engineer with 11+ years leading React, Next.js, and GCP architecture at scale.",
+    "Staff Fullstack Engineer with 11+ years building high-traffic web platforms across frontend and backend, now building agentic AI systems (Code Crafter, GullyScore).",
 };
 
 export default function RootLayout({ children }) {
