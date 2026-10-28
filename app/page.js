@@ -197,7 +197,7 @@ export default function Portfolio() {
               style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "12px", color: COLORS.accent, letterSpacing: "0.08em" }}
               className="mb-3"
             >
-              STAFF FRONTEND ENGINEER
+              FULL STACK SOFTWARE ENGINEER
             </div>
             <h1
               style={{
@@ -262,12 +262,7 @@ export default function Portfolio() {
                 ABOUT
               </div>
               <p style={{ fontSize: "15.5px", lineHeight: 1.75, color: COLORS.text }}>
-                Across Intertrust, Bluecore, and Paytm I've owned frontend architecture end to end —
-                from picking the state-management pattern on day one, to the CI pipeline that ships it,
-                to the RUM dashboard that tells us if it actually worked. Recent wins: a 45% LCP
-                improvement from an SSR migration, an 83% cut in CI build time, and $25–30K/month in
-                infra savings from a platform I designed myself. I lead distributed teams the same way
-                I write code — with clear structure and a bias for shipping.
+               Fullstack engineer with 11 years of experience across Intertrust, Bluecore and Paytm, owning products end to end: React and Next.js frontends, Node.js REST microservices and API contracts, GCP infrastructure, the CI pipeline that ships it, and the RUM dashboard that tells us if it actually worked. Recent wins: a 45% LCP improvement from an SSR migration, an 83% cut in CI build time, and $25–30K/month in infra savings from an image-processing platform on Cloud Run and Pub/Sub that I designed myself. On the AI side, I build agentic features with LLM tool calling (most recently GullyScore, where an AI agent answers match questions from live data), automated 300+ partner configuration migrations with AI-assisted scripts, and use Cursor and Claude Code every day. I lead distributed teams the same way I write code: with clear structure and a bias for shipping. Based in Noida and open to roles anywhere in India.
               </p>
             </div>
           </section>
