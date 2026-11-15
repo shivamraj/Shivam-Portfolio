@@ -17,9 +17,9 @@ const COLORS = {
 
 const NAV = [
   { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
   { id: "projects", label: "AI Projects" },
   { id: "experience", label: "Experience" },
-  { id: "skills", label: "Skills" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -217,7 +217,7 @@ export default function Portfolio() {
     <div style={{ minHeight: "100vh" }}>
       <div className="max-w-6xl mx-auto px-6 md:px-12 md:grid md:grid-cols-5 md:gap-12">
         {/* SIDEBAR */}
-        <aside className="md:col-span-2 md:sticky md:top-0 md:h-screen md:flex md:flex-col md:justify-center py-16 md:py-0">
+        <aside className="md:col-span-2 md:sticky md:top-0 md:min-h-screen md:flex md:flex-col md:justify-center py-10 md:py-12">
           <div
             style={{
               opacity: loaded ? 1 : 0,
@@ -276,17 +276,17 @@ export default function Portfolio() {
               ))}
             </nav>
 
-            <div className="flex gap-3 mt-10 flex-wrap" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "12px" }}>
-              <a href="mailto:shivamrajput007@gmail.com" className="btn btn-primary px-4 py-2.5">
+            <div className="grid grid-cols-2 sm:flex gap-3 mt-10 sm:flex-wrap" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "12px" }}>
+              <a href="mailto:shivamrajput007@gmail.com" className="btn btn-primary px-4 py-2.5 justify-center whitespace-nowrap">
                 <IconMail /> Email
               </a>
-              <a href="https://github.com/shivamraj" target="_blank" rel="noreferrer" className="btn btn-secondary px-4 py-2.5">
+              <a href="https://github.com/shivamraj" target="_blank" rel="noreferrer" className="btn btn-secondary px-4 py-2.5 justify-center whitespace-nowrap">
                 <IconGitHub /> GitHub
               </a>
-              <a href="https://linkedin.com/in/shivam-kumar-05572475" target="_blank" rel="noreferrer" className="btn btn-secondary px-4 py-2.5">
+              <a href="https://linkedin.com/in/shivam-kumar-05572475" target="_blank" rel="noreferrer" className="btn btn-secondary px-4 py-2.5 justify-center whitespace-nowrap">
                 <IconLinkedIn /> LinkedIn
               </a>
-              <a href="/resume.pdf" download="Shivam-Kumar-Resume.pdf" className="btn btn-secondary px-4 py-2.5">
+              <a href="/resume.pdf" download="Shivam-Kumar-Resume.pdf" className="btn btn-secondary px-4 py-2.5 justify-center whitespace-nowrap">
                 <IconDownload /> Resume
               </a>
             </div>
@@ -318,6 +318,32 @@ export default function Portfolio() {
               </p>
             </div>
           </section>
+
+          {/* SKILLS */}
+          <section id="skills" ref={(el) => (sectionRefs.current.skills = el)} className="mb-24">
+            <Reveal>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "11.5px", color: COLORS.amber, letterSpacing: "0.08em" }} className="mb-6">
+                SKILLS
+              </div>
+            </Reveal>
+            <div className="flex flex-col gap-6">
+              {SKILLS.map((s, i) => (
+                <Reveal key={s.group} delay={i * 60}>
+                  <div>
+                    <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "10.5px", color: COLORS.mutedDim, letterSpacing: "0.06em" }} className="mb-2">
+                      {s.group.toUpperCase()}
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {s.items.map((item) => (
+                        <span key={item} className="chip">{item}</span>
+                      ))}
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
 
           {/* AI PROJECTS */}
           <section id="projects" ref={(el) => (sectionRefs.current.projects = el)} className="mb-24">
@@ -393,31 +419,6 @@ export default function Portfolio() {
                     <div className="flex flex-wrap gap-2">
                       {job.tags.map((t) => (
                         <span key={t} className="tag">{t}</span>
-                      ))}
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </section>
-
-          {/* SKILLS */}
-          <section id="skills" ref={(el) => (sectionRefs.current.skills = el)} className="mb-24">
-            <Reveal>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "11.5px", color: COLORS.amber, letterSpacing: "0.08em" }} className="mb-6">
-                SKILLS
-              </div>
-            </Reveal>
-            <div className="flex flex-col gap-6">
-              {SKILLS.map((s, i) => (
-                <Reveal key={s.group} delay={i * 60}>
-                  <div>
-                    <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "10.5px", color: COLORS.mutedDim, letterSpacing: "0.06em" }} className="mb-2">
-                      {s.group.toUpperCase()}
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {s.items.map((item) => (
-                        <span key={item} className="chip">{item}</span>
                       ))}
                     </div>
                   </div>
