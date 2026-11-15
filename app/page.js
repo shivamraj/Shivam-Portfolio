@@ -16,8 +16,8 @@ const COLORS = {
 };
 
 const NAV = [
-  { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
+  { id: "about", label: "About" },
   { id: "projects", label: "AI Projects" },
   { id: "experience", label: "Experience" },
   { id: "contact", label: "Contact" },
@@ -217,7 +217,7 @@ export default function Portfolio() {
     <div style={{ minHeight: "100vh" }}>
       <div className="max-w-6xl mx-auto px-6 md:px-12 md:grid md:grid-cols-5 md:gap-12">
         {/* SIDEBAR */}
-        <aside className="md:col-span-2 md:sticky md:top-0 md:h-screen md:flex md:flex-col md:justify-center md:overflow-y-auto py-10 md:py-12">
+        <aside className="md:col-span-2 md:sticky md:top-0 md:h-screen md:flex md:flex-col md:justify-center pt-16 pb-10 md:pt-12 md:pb-12">
           <div
             style={{
               opacity: loaded ? 1 : 0,
@@ -295,30 +295,6 @@ export default function Portfolio() {
 
         {/* MAIN */}
         <main className="md:col-span-3 py-16 md:py-24">
-          {/* ABOUT */}
-          <section
-            id="about"
-            ref={(el) => (sectionRefs.current.about = el)}
-            className="mb-24 relative rounded-xl p-8 overflow-hidden"
-            style={{ border: `1px solid ${COLORS.hairline}`, background: COLORS.panel }}
-            onMouseMove={handleMouseMove}
-          >
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background: `radial-gradient(360px circle at ${spot.x}% ${spot.y}%, rgba(94,234,212,0.07), transparent 60%)`,
-              }}
-            />
-            <div className="relative">
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "11.5px", color: COLORS.amber, letterSpacing: "0.08em" }} className="mb-3">
-                ABOUT
-              </div>
-              <p style={{ fontSize: "15.5px", lineHeight: 1.75, color: COLORS.text }}>
-               Fullstack engineer with 11 years of experience across Intertrust, Bluecore and Paytm, owning products end to end: React and Next.js frontends, Node.js REST microservices and API contracts, GCP infrastructure, the CI pipeline that ships it, and the RUM dashboard that tells us if it actually worked. Recent wins: a 45% LCP improvement from an SSR migration, an 83% cut in CI build time, and $25–30K/month in infra savings from an image-processing platform on Cloud Run and Pub/Sub that I designed myself. On the AI side, I build agentic features with LLM tool calling (most recently GullyScore, where an AI agent answers match questions from live data), automated 300+ partner configuration migrations with AI-assisted scripts, and use Cursor and Claude Code every day. I lead distributed teams the same way I write code: with clear structure and a bias for shipping. Based in Noida and open to roles anywhere in India.
-              </p>
-            </div>
-          </section>
-
           {/* SKILLS */}
           <section id="skills" ref={(el) => (sectionRefs.current.skills = el)} className="mb-24">
             <Reveal>
@@ -344,6 +320,30 @@ export default function Portfolio() {
             </div>
           </section>
 
+
+          {/* ABOUT */}
+          <section
+            id="about"
+            ref={(el) => (sectionRefs.current.about = el)}
+            className="mb-24 relative rounded-xl p-8 overflow-hidden"
+            style={{ border: `1px solid ${COLORS.hairline}`, background: COLORS.panel }}
+            onMouseMove={handleMouseMove}
+          >
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background: `radial-gradient(360px circle at ${spot.x}% ${spot.y}%, rgba(94,234,212,0.07), transparent 60%)`,
+              }}
+            />
+            <div className="relative">
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "11.5px", color: COLORS.amber, letterSpacing: "0.08em" }} className="mb-3">
+                ABOUT
+              </div>
+              <p style={{ fontSize: "15.5px", lineHeight: 1.75, color: COLORS.text }}>
+               Fullstack engineer with 11 years of experience across Intertrust, Bluecore and Paytm, owning products end to end: React and Next.js frontends, Node.js REST microservices and API contracts, GCP infrastructure, the CI pipeline that ships it, and the RUM dashboard that tells us if it actually worked. Recent wins: a 45% LCP improvement from an SSR migration, an 83% cut in CI build time, and $25–30K/month in infra savings from an image-processing platform on Cloud Run and Pub/Sub that I designed myself. On the AI side, I build agentic features with LLM tool calling (most recently GullyScore, where an AI agent answers match questions from live data), automated 300+ partner configuration migrations with AI-assisted scripts, and use Cursor and Claude Code every day. I lead distributed teams the same way I write code: with clear structure and a bias for shipping. Based in Noida and open to roles anywhere in India.
+              </p>
+            </div>
+          </section>
 
           {/* AI PROJECTS */}
           <section id="projects" ref={(el) => (sectionRefs.current.projects = el)} className="mb-24">
