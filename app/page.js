@@ -122,10 +122,12 @@ function IconLinkedIn(props) {
   );
 }
 
-function IconGitHub(props) {
+function IconDownload(props) {
   return (
-    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" {...props}>
-      <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.61-3.37-1.21-3.37-1.21-.46-1.17-1.11-1.49-1.11-1.49-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.27 10.27 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z" />
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <path d="m7 10 5 5 5-5" />
+      <path d="M12 15V3" />
     </svg>
   );
 }
@@ -231,7 +233,7 @@ export default function Portfolio() {
               style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "12px", color: COLORS.accent, letterSpacing: "0.08em" }}
               className="mb-3"
             >
-              STAFF FULLSTACK ENGINEER
+              FULL STACK SOFTWARE ENGINEER
             </div>
             <h1
               style={{
@@ -275,6 +277,9 @@ export default function Portfolio() {
               <a href="https://linkedin.com/in/shivam-kumar-05572475" target="_blank" rel="noreferrer" className="btn btn-secondary px-4 py-2.5">
                 <IconLinkedIn /> LinkedIn
               </a>
+              <a href="/resume.pdf" download="Shivam-Kumar-Resume.pdf" className="btn btn-secondary px-4 py-2.5">
+                <IconDownload /> Resume
+              </a>
             </div>
           </div>
         </aside>
@@ -300,12 +305,7 @@ export default function Portfolio() {
                 ABOUT
               </div>
               <p style={{ fontSize: "15.5px", lineHeight: 1.75, color: COLORS.text }}>
-                Full Stack Engineer with 11+ years of experience building high-traffic web platforms
-                across frontend and backend, now focused on agentic AI. Most recently led a music
-                streaming platform at Intertrust, with a track record of cutting infrastructure costs
-                by $25K–$30K per month, improving Core Web Vitals, and shipping LLM-powered agents
-                (LLM APIs via LiteLLM, n8n workflows, tool calling) that automate manual workflows.
-                End-to-end owner and mentor to a distributed team of 6.
+               Fullstack engineer with 11 years of experience across Intertrust, Bluecore and Paytm, owning products end to end: React and Next.js frontends, Node.js REST microservices and API contracts, GCP infrastructure, the CI pipeline that ships it, and the RUM dashboard that tells us if it actually worked. Recent wins: a 45% LCP improvement from an SSR migration, an 83% cut in CI build time, and $25–30K/month in infra savings from an image-processing platform on Cloud Run and Pub/Sub that I designed myself. On the AI side, I build agentic features with LLM tool calling (most recently GullyScore, where an AI agent answers match questions from live data), automated 300+ partner configuration migrations with AI-assisted scripts, and use Cursor and Claude Code every day. I lead distributed teams the same way I write code: with clear structure and a bias for shipping. Based in Noida and open to roles anywhere in India.
               </p>
             </div>
           </section>
