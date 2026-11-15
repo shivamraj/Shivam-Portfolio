@@ -217,7 +217,7 @@ export default function Portfolio() {
     <div style={{ minHeight: "100vh" }}>
       <div className="max-w-6xl mx-auto px-6 md:px-12 md:grid md:grid-cols-5 md:gap-12">
         {/* SIDEBAR */}
-        <aside className="md:col-span-2 md:sticky md:top-0 md:h-screen md:flex md:flex-col md:justify-center pt-16 pb-10 md:pt-12 md:pb-12">
+        <aside className="no-scrollbar md:col-span-2 md:sticky md:top-0 md:h-screen md:flex md:flex-col md:justify-start md:overflow-y-auto pt-16 pb-10 md:pt-16 md:pb-16">
           <div
             style={{
               opacity: loaded ? 1 : 0,
